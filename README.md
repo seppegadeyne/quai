@@ -14,6 +14,6 @@ This repository contains shell scripts to manage and monitor the **Quai Node** a
 
 1. **Clone the repository or copy the scripts to your server:**
    ```bash
-   git clone https://github.com/seppegadeyne/quai-monitoring
+   git clone https://github.com/seppegadeyne/quai
    cd quai-monitoring
 
