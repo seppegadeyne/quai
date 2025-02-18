@@ -18,5 +18,5 @@ fi
 
 # Start the application in a new screen session
 screen -dmS "$SESSION_NAME" ./build/bin/go-quai-stratum --region=cyprus --zone=cyprus1
-echo "Stratum restarted in screen session '$SESSION_NAME'."
+echo "Stratum started in screen session '$SESSION_NAME'."
 

@@ -26,5 +26,5 @@ screen -dmS "$SESSION_NAME" ./build/bin/go-quai start \
 --node.miner-preference 0 \
 --node.coinbase-lockup 0
  
-echo "Stratum restarted in screen session '$SESSION_NAME'."
+echo "Quai started in screen session '$SESSION_NAME'."
 
