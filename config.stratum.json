@@ -1,0 +1,90 @@
+{
+	"threads": 11,
+	"coin": "quai",
+	"name": "main",
+	"network": "classic",
+	
+	"avgBlockTime": 4.4,
+	"blockTimeWindow": 100,
+	"proxy": {
+		"enabled": true,
+		"listen": "0.0.0.0:0",
+		"limitHeadersSize": 1024,
+		"limitBodySize": 256,
+		"behindReverseProxy": false,
+		"blockRefreshInterval": "100ms",
+		"stateUpdateInterval": "500ms",
+		"difficulty": "0x4000000000",
+		"DifficultyNiceHash": 4,
+		"hashrateExpiration": "3h",
+
+		"healthCheck": true,
+		"maxFails": 100,
+
+		"stratum": {
+			"enabled": true,
+			"listen": "0.0.0.0:3333",
+			"timeout": "30s",
+			"maxConn": 8192
+		},
+				
+		"policy": {
+			"workers": 11,
+			"resetInterval": "60m",
+			"refreshInterval": "5s",
+
+			"banning": {
+				"enabled": false,
+				"ipset": "blacklist",
+				"timeout": 1800,
+				"invalidPercent": 30,
+				"checkThreshold": 30,
+				"malformedLimit": 5
+			},
+			"limits": {
+				"enabled": false,
+				"limit": 30,
+				"grace": "5m",
+				"limitJump": 10
+			}
+		}
+	},
+
+	"api": {
+		"enabled": false,
+		"purgeOnly": false,
+		"purgeInterval": "10m",
+		"listen": "0.0.0.0:30300",
+		"statsCollectInterval": "5s",
+		"hashrateWindow": "30m",
+		"hashrateLargeWindow": "3h",
+		"luckWindow": [64, 128, 256],
+		"payments": 30,
+		"blocks": 50,
+		"poolCharts":"0 */20 * * * *",
+		"poolChartsNum":74,
+		"minerCharts":"0 */20 * * * *",
+		"minerChartsNum":74
+	},
+
+	"upstreamCheckInterval": "5s",
+	"upstream": [
+		{
+			"context": "prime",
+			"url": "ws://127.0.0.1:8001",
+			"timeout": "10s"
+		},
+		{
+			"context": "region",
+			"name": "",
+			"url": "",
+			"timeout": "10s"
+		},
+		{
+			"context": "zone",
+			"name": "",
+			"url": "",
+			"timeout": "10s"
+		}
+	]
+}
